@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star wars table</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <section class="container">
+        <h1>Start wars table</h1>
+        <button onclick="renderTableData(characters)">All characters</button>
+        <button onclick="renderTableData(charactersWithGreaterMassThan80)">Mass greater than 80</button>
+        <button onclick="renderTableData(charactersWithLessHeightThan180)">Mass height lesser than 180</button>
+        <button onclick="renderTableData(charatersMale)">Male characters</button>
+        <button onclick="renderTableData(charatersWithBlueEyes)">Characters with blue eyes</button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th onclick="sortByAlphabet('name')">Name</th>
+                    <th onclick="sortByNumber('height')">Height</th>
+                    <th onclick="sortByNumber('mass')">Mass</th>
+                    <th onclick="sortByAlphabet('eye_color')">Eye color</th>
+                    <th onclick="sortByAlphabet('gender')">Gender</th>
+                </tr>
+            </thead>
+
+            <tbody id="table">
+
+            </tbody>
+        </table>
+
+        <form>
+            <input id="name" placeholder="Enter name">
+            <input id="height" placeholder="Enter height">
+            <input id="mass" placeholder="Enter mass">
+            <input id="eye_color" placeholder="Enter eye_color">
+            <input id="gender" placeholder="Enter gender">
+            <button type="button" onclick="addCharacter()">Add character</button>
+        </form>
+    </section>
+</body>
+
+<script src="characters.js"></script>
+
+</html>
